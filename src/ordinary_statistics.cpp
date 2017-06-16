@@ -191,7 +191,7 @@ bool RBTree_with_statistics::find(int num) const {
 }
 
 int RBTree_with_statistics::operator[](double alpha) const {
-    if (alpha < 0 || alpha > 1)
+    if (alpha < 0 || alpha >= 1)
         throw std::invalid_argument
                 (
                         "incorrect argument: std::ceil(alpha * size) must be less than size"
